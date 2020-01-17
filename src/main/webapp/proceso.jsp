@@ -18,7 +18,7 @@
 Cliente cli;
         String edad = request.getParameter("edad");
         String nombre = request.getParameter("nombre");
-        String email = request.getParameter("email");
+        String email = request.getParameter("correo");
         
         if (email.equals("")||edad.equals("")||nombre.equals("")){
     %>
@@ -28,7 +28,7 @@ Cliente cli;
 <center> <h2>Faltan parámetros</h2> </center>
 <!-- Se han introducido correctamente, creamos el objeto con los datos -->
     <% } else {
-        cli = new Cliente(nombre, Integer.parseInt(edad), email);
+        cli = new Cliente(nombre, email,Integer.parseInt(edad));
     %>
     <p>
         Información recogida por el servidor:<br>
@@ -37,8 +37,9 @@ Cliente cli;
         Nombre: <%= cli.getNombre() %> <br>
         Correo: <%= cli.getEmail() %> <br>
         
+        
     <% } %> <!-- LLave del else -->
-    
+    <a href="index.html">Volver</a>
 </body>
 </html>
 
