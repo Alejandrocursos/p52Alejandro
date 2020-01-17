@@ -28,7 +28,7 @@ Cliente cli;
 <center> <h2>Faltan parámetros</h2> </center>
 <!-- Se han introducido correctamente, creamos el objeto con los datos -->
     <% } else {
-        cli = new Cliente(nombre, email, Integer.parseInt(edad));
+        cli = new Cliente(nombre, Integer.parseInt(edad), email);
     %>
     <p>
         Información recogida por el servidor:<br>

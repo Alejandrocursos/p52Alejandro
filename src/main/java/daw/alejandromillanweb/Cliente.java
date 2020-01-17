@@ -11,21 +11,29 @@ package daw.alejandromillanweb;
  */
 public class Cliente {
     
-    int nombre;
-    int edad;
-    String email;
+    private String nombre;
+    private int edad;
+    private String email;
 
-    public Cliente(int nombre, int edad, String email) {
+    public Cliente(String nombre, int edad, String email) {
         this.nombre = nombre;
         this.edad = edad;
         this.email = email;
     }
 
-    public int getNombre() {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -37,18 +45,12 @@ public class Cliente {
         this.edad = edad;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @Override
     public String toString() {
         return "Cliente{" + "nombre=" + nombre + ", edad=" + edad + ", email=" + email + '}';
     }
+
+    
     
     
     
